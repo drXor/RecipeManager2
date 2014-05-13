@@ -10,7 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import ro.thehunters.digi.recipeManager.Messages;
 import ro.thehunters.digi.recipeManager.Tools;
 import ro.thehunters.digi.recipeManager.flags.Args;
-import ro.thehunters.digi.recipeManager.flags.FlagDisplayResult;
 import ro.thehunters.digi.recipeManager.flags.FlagIngredientCondition;
 import ro.thehunters.digi.recipeManager.flags.FlagIngredientCondition.Conditions;
 import ro.thehunters.digi.recipeManager.flags.FlagKeepItem;
@@ -97,27 +96,6 @@ public class WorkbenchRecipe extends MultiResultRecipe
         
         displayNum = displayResults.size();
         boolean recieve = (secretNum + displayNum) > 0;
-        
-        FlagDisplayResult flag = (a.hasRecipe() ? a.recipe().getFlag(FlagDisplayResult.class) : null);
-        
-        if(flag != null)
-        {
-            if(!recieve && flag.isSilentFail())
-            {
-                return null;
-            }
-            
-            ItemStack display = flag.getDisplayItem();
-            
-            if(display != null)
-            {
-                return new ItemResult(display);
-            }
-            else if(displayNum > 0)
-            {
-                return displayResults.get(0);
-            }
-        }
         
         if(unavailableNum == 0 && failChance == 0)
         {
