@@ -73,7 +73,6 @@ public enum FlagType
     POTIONITEM(FlagPotionItem.class, Bit.RESULT, "potion"),
     ENCHANTITEM(FlagEnchantItem.class, Bit.RESULT, "enchant", "enchantment"),
     ENCHANTEDBOOK(FlagEnchantedBook.class, Bit.RESULT, "enchantbook", "enchantingbook"),
-    GETRECIPEBOOK(FlagGetRecipeBook.class, Bit.RESULT | Bit.NO_SHIFT, "getbook", "bookresult"),
     
     ;
     

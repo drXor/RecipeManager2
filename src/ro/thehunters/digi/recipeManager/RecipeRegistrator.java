@@ -168,9 +168,7 @@ public class RecipeRegistrator
         
         registered = true; // mark this class as registered so it doesn't get re-registered
         queuedRecipes.clear(); // clear the queue to let the class vanish
-        
-        RecipeManager.getRecipeBooks().reload(sender); // (re)create recipe books for recipes
-        
+                
         Messages.send(sender, String.format("All done in %.3f seconds, %d recipes processed.", ((System.currentTimeMillis() - start) / 1000.0), processed));
     }
 }

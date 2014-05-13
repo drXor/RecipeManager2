@@ -13,16 +13,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import ro.thehunters.digi.recipeManager.api.events.RecipeManagerEnabledEvent;
-import ro.thehunters.digi.recipeManager.commands.BooksCommand;
 import ro.thehunters.digi.recipeManager.commands.CheckCommand;
 import ro.thehunters.digi.recipeManager.commands.ExtractCommand;
-import ro.thehunters.digi.recipeManager.commands.FindItemCommand;
-import ro.thehunters.digi.recipeManager.commands.GetBookCommand;
 import ro.thehunters.digi.recipeManager.commands.HelpCommand;
 import ro.thehunters.digi.recipeManager.commands.RecipeCommand;
-import ro.thehunters.digi.recipeManager.commands.ReloadBooksCommand;
 import ro.thehunters.digi.recipeManager.commands.ReloadCommand;
-import ro.thehunters.digi.recipeManager.commands.UpdateCommand;
 import ro.thehunters.digi.recipeManager.data.FurnaceData;
 import ro.thehunters.digi.recipeManager.flags.ArgBuilder;
 import ro.thehunters.digi.recipeManager.flags.Args;
@@ -36,12 +31,10 @@ public class RecipeManager extends JavaPlugin
 {
     protected static RecipeManager plugin;
     protected static Recipes recipes;
-    protected static RecipeBooks recipeBooks;
     protected static Events events;
     protected static Settings settings;
     protected static Economy economy;
     protected static Permissions permissions;
-    protected static Metrics metrics;
     
     private final HashMap<String, String> plugins = new HashMap<String, String>();
     
@@ -89,13 +82,10 @@ public class RecipeManager extends JavaPlugin
         Args.init(); // dummy method to avoid errors on 'reload' with updating
         ArgBuilder.init();
         FlagType.init();
-        RecipeBooks.init();
         FurnaceWorker.init();
-        UpdateChecker.init();
         Files.init();
         Players.init();
         Workbenches.init();
-        Metrics.init();
         
         reload(null, false); // load data
         
@@ -106,14 +96,9 @@ public class RecipeManager extends JavaPlugin
         // Register commands
         getCommand("rm").setExecutor(new HelpCommand());
         getCommand("rmrecipes").setExecutor(new RecipeCommand());
-        getCommand("rmfinditem").setExecutor(new FindItemCommand());
         getCommand("rmcheck").setExecutor(new CheckCommand());
         getCommand("rmreload").setExecutor(new ReloadCommand());
-        getCommand("rmreloadbooks").setExecutor(new ReloadBooksCommand());
         getCommand("rmextract").setExecutor(new ExtractCommand());
-        getCommand("rmgetbook").setExecutor(new GetBookCommand());
-        getCommand("rmbooks").setExecutor(new BooksCommand());
-        getCommand("rmupdate").setExecutor(new UpdateCommand());
     }
     
     @Override
@@ -137,27 +122,7 @@ public class RecipeManager extends JavaPlugin
         
         Settings.reload(sender); // (re)load settings
         Files.reload(sender); // (re)generate info files if they do not exist
-        Messages.reload(sender); // (re)load messages from messages.yml
-        
-        if(settings.UPDATE_CHECK_ENABLED)
-        {
-            UpdateChecker.start();
-            
-            new UpdateChecker(sender);
-        }
-        
-        if(metrics == null)
-        {
-            if(settings.METRICS) // start/stop metrics accordingly
-            {
-                metrics = new Metrics(this);
-                metrics.start();
-            }
-        }
-        else if(metrics != null)
-        {
-            metrics.stop();
-        }
+        Messages.reload(sender); // (re)load messages from messages.yml     
         
         if(previousClearRecipes != settings.CLEAR_RECIPES)
         {
@@ -251,17 +216,13 @@ public class RecipeManager extends JavaPlugin
             Workbenches.clean();
             Players.clean();
             Vanilla.clean();
-            UpdateChecker.clean();
             
             economy.clear();
             economy = null;
             
             recipes.clean();
             recipes = null;
-            
-            recipeBooks.clean();
-            recipeBooks = null;
-            
+
             events.clean();
             events = null;
             
@@ -269,12 +230,6 @@ public class RecipeManager extends JavaPlugin
             
             permissions.clean();
             permissions = null;
-            
-            if(metrics != null)
-            {
-                metrics.stop();
-                metrics = null;
-            }
             
             plugin = null;
         }
@@ -301,17 +256,6 @@ public class RecipeManager extends JavaPlugin
     {
         validatePluginEnabled();
         return recipes;
-    }
-    
-    /**
-     * NOTE: Changes to a new instance on 'rmreload', do not store.
-     * 
-     * @return RecipeBooks class
-     */
-    public static RecipeBooks getRecipeBooks()
-    {
-        validatePluginEnabled();
-        return recipeBooks;
     }
     
     /**
