@@ -541,7 +541,7 @@ public class Events implements Listener {
 
 	/* Furnace craft events */
 
-	@EventHandler
+	//@EventHandler
 	public void inventoryClick(InventoryClickEvent event) {
 
 		try {
