@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang.Validate;
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import ro.thehunters.digi.recipeManager.Messages;
@@ -188,7 +189,7 @@ public class MultiResultRecipe extends BaseRecipe
     {
         for(ItemResult r : results)
         {
-            if(r.getTypeId() == 0)
+            if(r.getType() == Material.AIR)
             {
                 return r.getChance();
             }
@@ -206,7 +207,7 @@ public class MultiResultRecipe extends BaseRecipe
         /*
         for(ItemResult r : results)
         {
-            if(r.getTypeId() != 0 && !r.hasFlag(FlagType.SECRET))
+            if(r.getType() != 0 && !r.hasFlag(FlagType.SECRET))
             {
                 return r;
             }
@@ -216,7 +217,7 @@ public class MultiResultRecipe extends BaseRecipe
         */
         for(ItemResult r : results)
         {
-            if(r.getTypeId() != 0)
+            if(r.getType() != Material.AIR)
             {
                 return r.clone();
             }
@@ -274,7 +275,7 @@ public class MultiResultRecipe extends BaseRecipe
                 a.sendEffects(a.player(), Messages.FLAG_PREFIX_RESULT.get("{item}", Tools.Item.print(result)));
             }
             
-            if(result.getTypeId() == 0 && this.hasFlags())
+            if(result.getType() == Material.AIR && this.hasFlags())
             {
                 this.sendFailed(a);
                 a.sendEffects(a.player(), Messages.FLAG_PREFIX_RECIPE.get());

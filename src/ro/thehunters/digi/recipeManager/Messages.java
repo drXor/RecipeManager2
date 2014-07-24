@@ -20,149 +20,149 @@ public enum Messages
 {
     // Flags
     
-    FLAG_OVERRIDE("<yellow>Overwrites another recipe."),
+    FLAG_OVERRIDE(null),//"<yellow>Overwrites another recipe."),
     
-    FLAG_RESTRICT("<red>Recipe is disabled."),
+    FLAG_RESTRICT(null),//"<red>Recipe is disabled."),
     
-    FLAG_HOLDITEM("<red>Need to hold: <yellow>{items}"),
+    FLAG_HOLDITEM(null),//"<red>Need to hold: <yellow>{items}"),
     
-    FLAG_GAMEMODE("<red>Allowed gamemodes: <yellow>{gamemodes}"),
+    FLAG_GAMEMODE(null),//"<red>Allowed gamemodes: <yellow>{gamemodes}"),
     
-    FLAG_HEIGHT("<red>Need height: <yellow>{height}"),
+    FLAG_HEIGHT(null),//"<red>Need height: <yellow>{height}"),
     
-    FLAG_ONLINETIME("<red>Need online time: <yellow>{range}"),
+    FLAG_ONLINETIME(null),//"<red>Need online time: <yellow>{range}"),
     
-    FLAG_PERMISSION_ALLOWED("<red>Allowed permissions: <yellow>{permissions}"),
-    FLAG_PERMISSION_UNALLOWED("<red>Unallowed permissions: <yellow>{permissions}"),
+    FLAG_PERMISSION_ALLOWED(null),//"<red>Allowed permissions: <yellow>{permissions}"),
+    FLAG_PERMISSION_UNALLOWED(null),//"<red>Unallowed permissions: <yellow>{permissions}"),
     
-    FLAG_GROUP_ALLOWED("<red>Allowed groups: <yellow>{groups}"),
-    FLAG_GROUP_UNALLOWED("<red>Unallowed groups: <yellow>{groups}"),
+    FLAG_GROUP_ALLOWED(null),//"<red>Allowed groups: <yellow>{groups}"),
+    FLAG_GROUP_UNALLOWED(null),//"<red>Unallowed groups: <yellow>{groups}"),
     
-    FLAG_WORLD_ALLOWED("<red>Allowed worlds: <yellow>{worlds}"),
-    FLAG_WORLD_UNALLOWED("<red>Unallowed worlds: <yellow>{worlds}"),
+    FLAG_WORLD_ALLOWED(null),//"<red>Allowed worlds: <yellow>{worlds}"),
+    FLAG_WORLD_UNALLOWED(null),//"<red>Unallowed worlds: <yellow>{worlds}"),
     
-    FLAG_WEATHER("<red>Needs weather: <yellow>{weather}"),
+    FLAG_WEATHER(null),//"<red>Needs weather: <yellow>{weather}"),
     
-    FLAG_BIOME_ALLOWED("<red>Allowed biomes: <yellow>{biomes}"),
-    FLAG_BIOME_UNALLOWED("<red>Unallowed biomes: <yellow>{biomes}"),
+    FLAG_BIOME_ALLOWED(null),//"<red>Allowed biomes: <yellow>{biomes}"),
+    FLAG_BIOME_UNALLOWED(null),//"<red>Unallowed biomes: <yellow>{biomes}"),
     
-    FLAG_RETURNITEM_RETURNED("<green>Returned item {item}<green> in crafting grid."),
-    FLAG_RETURNITEM_MERGED("<green>Returned item {item}<green> merged in crafting grid."),
-    FLAG_RETURNITEM_RECIEVED("<yellow>Returned item {item}<green> added to inventory."),
-    FLAG_RETURNITEM_DROPPED("<yellow>Returned item {item}<green> dropped."),
+    FLAG_RETURNITEM_RETURNED(null),//"<green>Returned item {item}<green> in crafting grid."),
+    FLAG_RETURNITEM_MERGED(null),//"<green>Returned item {item}<green> merged in crafting grid."),
+    FLAG_RETURNITEM_RECIEVED(null),//"<yellow>Returned item {item}<green> added to inventory."),
+    FLAG_RETURNITEM_DROPPED(null),//"<yellow>Returned item {item}<green> dropped."),
     
-    FLAG_BLOCKPOWERED_FURNACE("<red>Need a furnace powered by redstone."),
-    FLAG_BLOCKPOWERED_WORKBENCH("<red>Need a workbench powered by redstone."),
+    FLAG_BLOCKPOWERED_FURNACE(null),//"<red>Need a furnace powered by redstone."),
+    FLAG_BLOCKPOWERED_WORKBENCH(null),//"<red>Need a workbench powered by redstone."),
     
-    FLAG_LIGHTLEVEL("<red>Need to be in <yellow>{light}<red> levels of <yellow>{type}<red>."),
+    FLAG_LIGHTLEVEL(null),//"<red>Need to be in <yellow>{light}<red> levels of <yellow>{type}<red>."),
     
-    FLAG_SETBLOCK_NEEDSWORKBENCH("<red>Recipe needs to be used with a workbench!"),
+    FLAG_SETBLOCK_NEEDSWORKBENCH(null),//"<red>Recipe needs to be used with a workbench!"),
     
-    FLAG_ITEMS("<red>Need in inventory: <yellow>{items}"),
-    FLAG_NOITEMS("<red>Unallowed in inventory: <yellow>{items}"),
-    FLAG_EQUIP("<red>Need equipped: <yellow>{items}"),
-    FLAG_NOEQUIP("<red>Unallowed equipped: <yellow>{items}"),
-    FLAG_HOLD("<red>Need in hand: <yellow>{items}"),
-    FLAG_NOHOLD("<red>Unallowed in hand: <yellow>{items}"),
+    FLAG_ITEMS(null),//"<red>Need in inventory: <yellow>{items}"),
+    FLAG_NOITEMS(null),//"<red>Unallowed in inventory: <yellow>{items}"),
+    FLAG_EQUIP(null),//"<red>Need equipped: <yellow>{items}"),
+    FLAG_NOEQUIP(null),//"<red>Unallowed equipped: <yellow>{items}"),
+    FLAG_HOLD(null),//"<red>Need in hand: <yellow>{items}"),
+    FLAG_NOHOLD(null),//"<red>Unallowed in hand: <yellow>{items}"),
     
-    FLAG_COMMAND_PLAYER("Executes command on crafter: <yellow>{command}"),
-    FLAG_COMMAND_SERVER("Executes console command: <yellow>{command}"),
+    FLAG_COMMAND_PLAYER(null),//"Executes command on crafter: <yellow>{command}"),
+    FLAG_COMMAND_SERVER(null),//"Executes console command: <yellow>{command}"),
     
-    FLAG_INGREDIENTCONDITIONS_NODATA("<yellow>{item}<red> needs data values: <yellow>{data}"),
-    FLAG_INGREDIENTCONDITIONS_NOAMOUNT("<yellow>{item}<red> needs amount: <yellow>{amount}"),
-    FLAG_INGREDIENTCONDITIONS_NOENCHANTS("<yellow>{item}<red> needs enchantments: <yellow>{enchants}"),
-    FLAG_INGREDIENTCONDITIONS_NONAME("<yellow>{item}<red> needs name: <yellow>{name}"),
-    FLAG_INGREDIENTCONDITIONS_NOLORE("<yellow>{item}<red> needs lore: <yellow>{lore}"),
-    FLAG_INGREDIENTCONDITIONS_NOCOLOR("<yellow>{item}<red> needs color: <yellow>{color}"),
+    FLAG_INGREDIENTCONDITIONS_NODATA(null),//"<yellow>{item}<red> needs data values: <yellow>{data}"),
+    FLAG_INGREDIENTCONDITIONS_NOAMOUNT(null),//"<yellow>{item}<red> needs amount: <yellow>{amount}"),
+    FLAG_INGREDIENTCONDITIONS_NOENCHANTS(null),//"<yellow>{item}<red> needs enchantments: <yellow>{enchants}"),
+    FLAG_INGREDIENTCONDITIONS_NONAME(null),//"<yellow>{item}<red> needs name: <yellow>{name}"),
+    FLAG_INGREDIENTCONDITIONS_NOLORE(null),//"<yellow>{item}<red> needs lore: <yellow>{lore}"),
+    FLAG_INGREDIENTCONDITIONS_NOCOLOR(null),//"<yellow>{item}<red> needs color: <yellow>{color}"),
     
-    FLAG_NEEDEXP("<red>Need EXP: <yellow>{exp}"),
+    FLAG_NEEDEXP(null),//"<red>Need EXP: <yellow>{exp}"),
     
-    FLAG_MODEXP_ADD("<green>+{amount}<reset> EXP"),
-    FLAG_MODEXP_SUB("<yellow>-{amount}<reset> EXP"),
-    FLAG_MODEXP_SET("<reset>EXP set to <yellow>{amount}"),
+    FLAG_MODEXP_ADD(null),//"<green>+{amount}<reset> EXP"),
+    FLAG_MODEXP_SUB(null),//"<yellow>-{amount}<reset> EXP"),
+    FLAG_MODEXP_SET(null),//"<reset>EXP set to <yellow>{amount}"),
     
-    FLAG_NEEDLEVEL("<red>Need level: <yellow>{level}"),
+    FLAG_NEEDLEVEL(null),//"<red>Need level: <yellow>{level}"),
     
-    FLAG_MODLEVEL_ADD("<green>+{amount}<reset> level(s)"),
-    FLAG_MODLEVEL_SUB("<red>-{amount}<reset> level(s)"),
-    FLAG_MODLEVEL_SET("<reset>Level set to <yellow>{amount}"),
+    FLAG_MODLEVEL_ADD(null),//"<green>+{amount}<reset> level(s)"),
+    FLAG_MODLEVEL_SUB(null),//"<red>-{amount}<reset> level(s)"),
+    FLAG_MODLEVEL_SET(null),//"<reset>Level set to <yellow>{amount}"),
     
-    FLAG_NEEDMONEY("<red>Need money: <yellow>{money}"),
+    FLAG_NEEDMONEY(null),//"<red>Need money: <yellow>{money}"),
     
-    FLAG_MODMONEY_ADD("<green>+{money}"),
-    FLAG_MODMONEY_SUB("<red>-{money}"),
-    FLAG_MODMONEY_SET("<reset>Money set to <yellow>{money}"),
+    FLAG_MODMONEY_ADD(null),//"<green>+{money}"),
+    FLAG_MODMONEY_SUB(null),//"<red>-{money}"),
+    FLAG_MODMONEY_SET(null),//"<reset>Money set to <yellow>{money}"),
     
-    FLAG_PLAYERBUKKITMETA("<red>You need to be special..."),
-    FLAG_NOPLAYERBUKKITMETA("<red>You're too special..."),
+    FLAG_PLAYERBUKKITMETA(null),//"<red>You need to be special..."),
+    FLAG_NOPLAYERBUKKITMETA(null),//"<red>You're too special..."),
     
-    FLAG_BLOCKBUKKITMETA("<red>Needs special block..."),
-    FLAG_NOBLOCKBUKKITMETA("<red>Block to special..."),
+    FLAG_BLOCKBUKKITMETA(null),//"<red>Needs special block..."),
+    FLAG_NOBLOCKBUKKITMETA(null),//"<red>Block to special..."),
     
-    FLAG_POTIONEFFECTS("<red>Need potion effect: {effects}"),
-    FLAG_NOPOTIONEFFECTS("<red>Unallowed potion effect: {effects}"),
+    FLAG_POTIONEFFECTS(null),//"<red>Need potion effect: {effects}"),
+    FLAG_NOPOTIONEFFECTS(null),//"<red>Unallowed potion effect: {effects}"),
     
-    FLAG_REALTIME("<red>Allowed between {mindate} and {maxdate}"),
+    FLAG_REALTIME(null),//"<red>Allowed between {mindate} and {maxdate}"),
     
-    FLAG_COOLDOWN_FAIL_PERPLAYER("<red>Personal cooldown: {time}"),
-    FLAG_COOLDOWN_FAIL_GLOBAL("<red>Global cooldown: {time}"),
-    FLAG_COOLDOWN_SET_PERPLAYER("<yellow>Personal cooldown set to {time}"),
-    FLAG_COOLDOWN_SET_GLOBAL("<yellow>Global cooldown set to {time}"),
+    FLAG_COOLDOWN_FAIL_PERPLAYER(null),//"<red>Personal cooldown: {time}"),
+    FLAG_COOLDOWN_FAIL_GLOBAL(null),//"<red>Global cooldown: {time}"),
+    FLAG_COOLDOWN_SET_PERPLAYER(null),//"<yellow>Personal cooldown set to {time}"),
+    FLAG_COOLDOWN_SET_GLOBAL(null),//"<yellow>Global cooldown set to {time}"),
     
-    FLAG_CLONE_RESULTDISPLAY("<dark_aqua><italic>(clone)"),
+    FLAG_CLONE_RESULTDISPLAY(null),//"<dark_aqua><italic>(clone)"),
     
-    FLAG_PREFIX_RECIPE("<gray>(Recipe) <reset>"),
-    FLAG_PREFIX_RESULT("<gray>(Result {item}<gray>) <reset>"),
-    FLAG_PREFIX_FURNACE("<gray>(Furnace {location}) <reset>"),
+    FLAG_PREFIX_RECIPE(null),//"<gray>(Recipe) <reset>"),
+    FLAG_PREFIX_RESULT(null),//"<gray>(Result {item}<gray>) <reset>"),
+    FLAG_PREFIX_FURNACE(null),//"<gray>(Furnace {location}) <reset>"),
     
     // Crafting
     
-    CRAFT_REPAIR_DISABLED("<red>Repair recipes disabled."),
+    CRAFT_REPAIR_DISABLED(null),//"<red>Repair recipes disabled."),
     
-    CRAFT_SPECIAL_LEATHERDYE("<red>Leather dyeing is disabled."),
-    CRAFT_SPECIAL_FIREWORKS("<red>Firework crafting is disabled."),
-    CRAFT_SPECIAL_MAP_CLONING("<red>Map cloning is disabled."),
-    CRAFT_SPECIAL_MAP_EXTENDING("<red>Map extending is disabled."),
+    CRAFT_SPECIAL_LEATHERDYE(null),//"<red>Leather dyeing is disabled."),
+    CRAFT_SPECIAL_FIREWORKS(null),//"<red>Firework crafting is disabled."),
+    CRAFT_SPECIAL_MAP_CLONING(null),//"<red>Map cloning is disabled."),
+    CRAFT_SPECIAL_MAP_EXTENDING(null),//"<red>Map extending is disabled."),
     
-    CRAFT_RESULT_DENIED_TITLE("<yellow><underline>You can't craft this recipe!"),
-    CRAFT_RESULT_DENIED_INFO("<green>See chat for reasons."),
-    CRAFT_RESULT_NORECIEVE_TITLE("<yellow><underline>You can't craft any results from this recipe!"),
-    CRAFT_RESULT_NORECIEVE_INFO("<green>See chat for reasons."),
-    CRAFT_RESULT_RECIEVE_TITLE_UNKNOWN("<light_purple><underline>You will get an unknown item!"),
-    CRAFT_RESULT_RECIEVE_TITLE_RANDOM("<light_purple><underline>You will get a random item:"),
-    CRAFT_RESULT_LIST_ITEM("<dark_green>{chance} <green>{item} {clone}"),
-    CRAFT_RESULT_LIST_SECRETS("<dark_aqua>{num} secret item(s)"),
-    CRAFT_RESULT_LIST_FAILURE("<red>{chance} Failure chance"),
-    CRAFT_RESULT_LIST_UNAVAILABLE("<dark_red>{num} unavailable item(s)"),
+    CRAFT_RESULT_DENIED_TITLE(null),//"<yellow>You can't craft this recipe!"),
+    CRAFT_RESULT_DENIED_INFO(null),//"<green>See chat for reasons."),
+    CRAFT_RESULT_NORECIEVE_TITLE(null),//"<yellow>You can't craft any results from this recipe!"),
+    CRAFT_RESULT_NORECIEVE_INFO(null),//"<green>See chat for reasons."),
+    CRAFT_RESULT_RECIEVE_TITLE_UNKNOWN(null),//"<light_purple>You will get an unknown item!"),
+    CRAFT_RESULT_RECIEVE_TITLE_RANDOM(null),//"<light_purple>You will get a random item:"),
+    CRAFT_RESULT_LIST_ITEM(null),//"<dark_green>{chance} <green>{item} {clone}"),
+    CRAFT_RESULT_LIST_SECRETS(null),//"<dark_aqua>{num} secret item(s)"),
+    CRAFT_RESULT_LIST_FAILURE(null),//"<red>{chance} Failure chance"),
+    CRAFT_RESULT_LIST_UNAVAILABLE(null),//"<dark_red>{num} unavailable item(s)"),
     
-    CRAFT_RECIPE_MULTI_FAILED("<yellow>NOTE: <white>That sound was the recipe failing by chance! See 'fail chance' in the result description."),
-    CRAFT_RECIPE_MULTI_NOSHIFTCLICK("<yellow>NOTE: <white>Recipe has more than one result, shift+clicking will only craft it once."),
-    CRAFT_RECIPE_MULTI_CURSORFULL("<yellow>NOTE: <white>Cursor is full or not same type as result, put the held item in inventory or use Shift+Click to craft one by one to inventory."),
+    CRAFT_RECIPE_MULTI_FAILED(null),//"<yellow>NOTE: <white>That sound was the recipe failing by chance! See 'fail chance' in the result description."),
+    CRAFT_RECIPE_MULTI_NOSHIFTCLICK(null),//"<yellow>NOTE: <white>Recipe has more than one result, shift+clicking will only craft it once."),
+    CRAFT_RECIPE_MULTI_CURSORFULL(null),//"<yellow>NOTE: <white>Cursor is full or not same type as result, put the held item in inventory or use Shift+Click to craft one by one to inventory."),
     
     CRAFT_RECIPE_FLAG_NOSHIFTCLICK("<yellow>NOTE: <white>Recipe is special, shift-clicking will only craft it once."),
     
-    SMELT_FUEL_NEEDINGREDIENT("<red>Fuel {fuel}<red> needs specific ingredient: {ingredient}"),
-    SMELT_FUEL_NEEDFUEL("<red>Ingredient {ingredient}<red> needs specific fuel: {fuel}"),
+    SMELT_FUEL_NEEDINGREDIENT(null),//"<red>Fuel {fuel}<red> needs specific ingredient: {ingredient}"),
+    SMELT_FUEL_NEEDFUEL(null),//"<red>Ingredient {ingredient}<red> needs specific fuel: {fuel}"),
     
-    SMELT_FROZEN("<red>Furnace at <yellow>{location} <red>will be frozen until you re-place the ingredient."),
+    SMELT_FROZEN(null),//"<red>Furnace at <yellow>{location} <red>will be frozen until you re-place the ingredient."),
     
-    ITEM_ANYDATA("<gray>any"),
+    ITEM_ANYDATA(null),//"<gray>any"),
     
     RECIPEBOOK_VOLUME("Volume {volume}"),
     RECIPEBOOK_VOLUMEOFVOLUMES("Volume {volume} of {volumes}"),
-    RECIPEBOOK_HEADER_CONTENTS("<black><bold><underline>CONTENTS INDEX"),
-    RECIPEBOOK_HEADER_SHAPED("<black><bold>SHAPED RECIPE"),
-    RECIPEBOOK_HEADER_SHAPELESS("<black><bold>SHAPELESS RECIPE"),
-    RECIPEBOOK_HEADER_SMELT("<black><bold>FURNACE RECIPE"),
-    RECIPEBOOK_HEADER_FUEL("<black><bold>FURNACE FUEL"),
-    RECIPEBOOK_HEADER_SHAPE("<black><underline>Shape"),
-    RECIPEBOOK_HEADER_INGREDIENTS("<black><underline>Ingredients"),
-    RECIPEBOOK_HEADER_INGREDIENT("<black><underline>Ingredient"),
-    RECIPEBOOK_HEADER_COOKTIME("<black><underline>Cooking time"),
-    RECIPEBOOK_HEADER_BURNTIME("<black><underline>Burning time"),
-    RECIPEBOOK_HEADER_REQUIREFUEL("<black><underline>As fuel"),
+    RECIPEBOOK_HEADER_CONTENTS("<black>CONTENTS INDEX"),
+    RECIPEBOOK_HEADER_SHAPED("<black>SHAPED RECIPE"),
+    RECIPEBOOK_HEADER_SHAPELESS("<black>SHAPELESS RECIPE"),
+    RECIPEBOOK_HEADER_SMELT("<black>FURNACE RECIPE"),
+    RECIPEBOOK_HEADER_FUEL("<black>FURNACE FUEL"),
+    RECIPEBOOK_HEADER_SHAPE("<black>Shape"),
+    RECIPEBOOK_HEADER_INGREDIENTS("<black>Ingredients"),
+    RECIPEBOOK_HEADER_INGREDIENT("<black>Ingredient"),
+    RECIPEBOOK_HEADER_COOKTIME("<black>Cooking time"),
+    RECIPEBOOK_HEADER_BURNTIME("<black>Burning time"),
+    RECIPEBOOK_HEADER_REQUIREFUEL("<black>As fuel"),
     RECIPEBOOK_MORERESULTS("<dark_green>+{amount} more results"),
-    RECIPEBOOK_SMELT_TIME_NORMAL("<black>Normal <gray>(<dark_red>{time} <gray>seconds)"),
+    RECIPEBOOK_SMELT_TIME_NORMAL("<black><gray>({time} seconds)"),
     RECIPEBOOK_SMELT_TIME_INSTANT("<dark_green>Instant <gray>(0 seconds)"),
     RECIPEBOOK_SMELT_TIME_FIXED("<red>{time} <black>seconds"),
     RECIPEBOOK_SMELT_TIME_RANDOM("<red>{min} <black>to <red>{max} <black>seconds"),
@@ -177,11 +177,11 @@ public enum Messages
     CMD_GETBOOK_INVALIDNUMBER("<red>Volume argument must be a number!"),
     CMD_GETBOOK_NOTEXIST("<red>No books found by '{arg}'."),
     CMD_GETBOOK_MANYMATCHES("<red>Found {num} books by '{arg}':"),
-    CMD_GETBOOK_GIVEN("<green>Got book: {title}"),
+    CMD_GETBOOK_GIVEN("<gold>Got book: {title}"),
     
     CMD_BOOKS_NOBOOKS("<red>No generated books."),
-    CMD_BOOKS_HEADER("<yellow>Generated recipe books ({number}):"),
-    CMD_BOOKS_ITEM("<white>{title} <gray>(volumes: {volumes})"),
+    CMD_BOOKS_HEADER("<gold>Generated recipe books ({number}):"),
+    CMD_BOOKS_ITEM("<gold>{title} <gray>(volumes: {volumes})"),
     
     CMD_EXTRACT_WAIT("<red>Command re-used too fast, wait a second."),
     CMD_EXTRACT_UNKNOWNARG("<red>Unknown argument: <yellow>{arg}"),
@@ -189,31 +189,31 @@ public enum Messages
     CMD_EXTRACT_NORECIPES("<yellow>No recipes to extract."),
     CMD_EXTRACT_DONE("<green>Done! Recipes saved to '<white>{file}<green>'."),
     
-    CMD_RECIPES_USAGE("<yellow>Usage: <gray>/{command} <white><material>:[data]:[amount]"),
-    CMD_RECIPES_STATS_MC("Minecraft: <green>{num}"),
-    CMD_RECIPES_STATS_RM("RecipeManager: <green>{num}"),
-    CMD_RECIPES_STATS_OTHER("Other plugins/mods: <green>{num}"),
-    CMD_RECIPES_HEADER("<yellow>----- <white>Recipes for <green>{item} <white>({num} of {total})<yellow>-----"),
-    CMD_RECIPES_MORE("<yellow>----- <white><blue>{cmdnext} <white>for next, <blue>{cmdprev} <white>for previous <yellow>-----"),
-    CMD_RECIPES_END("<yellow>----- <white>No more recipes <yellow>-----"),
+    CMD_RECIPES_USAGE("<gold>Usage: <gray>/{command} <material>:[data]:[amount]"),
+    CMD_RECIPES_STATS_MC("<gold>Recipe:"),
+    CMD_RECIPES_STATS_RM("<gold>Recipe:"),
+    CMD_RECIPES_STATS_OTHER("<gold>Recipe:"),
+    CMD_RECIPES_HEADER("<gold>===== <white>Recipes for <green>{item} <gold>(<blue>{num} <gold>of <blue>{total}) ====="),
+    CMD_RECIPES_MORE("<gold>===== <blue>{cmdnext} <gold>for next, <blue>{cmdprev} <gold>for previous<gold> ====="),
+    CMD_RECIPES_END("<gold>===== No more recipes ====="),
     CMD_RECIPES_NONEXT("<red>No more recipes next, type <blue>{command} <red>to see the previous recipe."),
-    CMD_RECIPES_NOPREV("<red>Can't go backwards more than this, type <blue>{command} <red>to see the next recipe."),
+    CMD_RECIPES_NOPREV("<red>Can't go backwards more than this, type {command} <red>to see the next recipe."),
     CMD_RECIPES_NEEDQUERY("<red>No search progress! Use the command with an item name to search."),
-    CMD_RECIPES_NORESULTS("<red>No results for <yellow>{item}"),
-    CMD_RECIPES_NOHAND("<red>You don't have anything in your hand therefore you can't use 'this' argument."),
-    CMD_RECIPES_INVALIDITEM("<red>Invalid item: <yellow>{arg}"),
+    CMD_RECIPES_NORESULTS("<red>No results for {item}!"),
+    CMD_RECIPES_NOHAND("<red>You don't have anything in your hand therefore you can't use the 'this' argument."),
+    CMD_RECIPES_INVALIDITEM("<red>Invalid item: '{arg}'!"),
     
-    CMD_FINDITEM_USAGE("<yellow>Usage: <gray>/{command} <white><item partial name>"),
-    CMD_FINDITEM_INVALIDHELDITEM("<yellow>You need to hold an item to use the '<white>this<yellow>' argument."),
-    CMD_FINDITEM_HEADER("Found <green>{matches}<white> materials matching '<green>{argument}<white>':"),
-    CMD_FINDITEM_LIST("<gray>#<red>{id} <green>{material}<gray>, max durability <yellow>{maxdata}<gray>, max stack <yellow>{maxstack}"),
-    CMD_FINDITEM_FOUNDMORE("<yellow>... and <green>{matches}<yellow> more, be more specific in your search."),
-    CMD_FINDITEM_NOTFOUND("<yellow>No material found by '<white>{argument}<yellow>'."),
+    CMD_FINDITEM_USAGE("<gold>Usage: <gray>/{command} <item partial name>"),
+    CMD_FINDITEM_INVALIDHELDITEM("<gold>You need to hold an item to use the 'this' argument."),
+    CMD_FINDITEM_HEADER("<gold>Found <blue>{matches}<gold> materials matching '<blue>{argument}<gold>':"),
+    CMD_FINDITEM_LIST("<gold>#<red>{id}: <red>{material}<gold>, max durability <red>{maxdata}<gold>, max stack <red>{maxstack}<gold>."),
+    CMD_FINDITEM_FOUNDMORE("<gold>... and <blue>{matches}<gold> more, be more specific in your search."),
+    CMD_FINDITEM_NOTFOUND("<red>No material found by '{argument}'."),
     
     LASTCHANGED(null);
     
     private static final Map<String, Set<String>> sent = new HashMap<String, Set<String>>();
-    private static FileConfiguration yml;
+    //private static FileConfiguration yml;
     
     private String path;
     private String message;
@@ -224,15 +224,15 @@ public enum Messages
         this.message = message;
     }
     
-    private void asign()
+    /*private void asign()
     {
-        message = yml.getString(path, message); // get the message or use the predefined one if doesn't exist
-        
+       /message = yml.getString(path, message); // get the message or use the predefined one if doesn't exist
+      
         if(message != null && (message.isEmpty() || message.equals("false")))
         {
             message = null; // disable message if empty or 'false'
         }
-    }
+    }*/
     
     /**
      * (Re)Loads all messages
@@ -241,6 +241,9 @@ public enum Messages
      */
     public static void reload(CommandSender sender)
     {
+    	
+    	sender.sendMessage("Message configuration is disabled.");
+    	/*
         File file = new File(RecipeManager.getPlugin().getDataFolder() + File.separator + Files.FILE_MESSAGES);
         
         if(!file.exists())
@@ -280,7 +283,7 @@ public enum Messages
         if(LASTCHANGED == null || LASTCHANGED.message == null || !LASTCHANGED.message.equals(Files.LASTCHANGED_MESSAGES))
         {
             sendAndLog(sender, "<yellow>NOTE: <reset>'" + Files.FILE_MESSAGES + "' file is outdated, please delete it to allow it to be generated again.");
-        }
+        }*/
     }
     
     /**
@@ -474,16 +477,15 @@ public enum Messages
      */
     public static void send(CommandSender sender, String[] messages)
     {
-        if(sender == null)
+    	if(sender == null)
         {
-            sender = Bukkit.getConsoleSender();
+    		for(String s : messages)
+    			log(s);
         }
-        
-        boolean removeColors = (!RecipeManager.getSettings().COLOR_CONSOLE && sender instanceof ConsoleCommandSender);
-        
+    	
         for(String message : messages)
         {
-            message = Tools.parseColors(message, removeColors);
+            message = Tools.parseColors(message, false);
         }
         
         sender.sendMessage(messages);
@@ -500,12 +502,7 @@ public enum Messages
     {
         if(sender == null)
         {
-            sender = Bukkit.getConsoleSender();
-        }
-        
-        if(sender instanceof ConsoleCommandSender)
-        {
-            message = "[RecipeManager] " + message;
+            log(message);
         }
         
         sender.sendMessage(Tools.parseColors(message, (sender instanceof ConsoleCommandSender && !RecipeManager.getSettings().COLOR_CONSOLE)));
@@ -538,10 +535,10 @@ public enum Messages
     
     private static void sendSound(Player player, Location location, Sound sound, float volume, float pitch, boolean condition)
     {
-        if(player != null && condition)
+        /*if(player != null && condition)
         {
             player.playSound(location == null ? player.getLocation() : location, sound, volume, pitch);
-        }
+        }*/
     }
     
     /**
@@ -551,12 +548,12 @@ public enum Messages
      */
     public static void info(String message)
     {
-        send(null, message);
+        log(message);
     }
     
     public static void log(String message)
     {
-        Bukkit.getLogger().fine(Tools.parseColors("[RecipeManager] " + message, true));
+        RecipeManager.getPlugin().getLogger().info(Tools.parseColors(message, true));
     }
     
     public static void error(CommandSender sender, Throwable thrown, String message)
@@ -564,14 +561,11 @@ public enum Messages
         try
         {
             message = "<red>" + (message == null ? thrown.getMessage() : message + " (" + thrown.getMessage() + ")");
-            sendAndLog(sender, message);
+            //sendAndLog(sender, message);
             notifyDebuggers(message);
             
             thrown.printStackTrace();
             
-            message = ChatColor.LIGHT_PURPLE + "If you're using the latest version you should report this error at: http://dev.bukkit.org/server-mods/recipemanager/create-ticket/";
-            info(message);
-            notifyDebuggers(message);
         }
         catch(Throwable e)
         {
@@ -582,7 +576,6 @@ public enum Messages
             System.out.print("Error printing error:");
             e.printStackTrace();
             
-            System.out.print("If you're using the latest version you should report this error at: http://dev.bukkit.org/server-mods/recipemanager/create-ticket/");
         }
     }
     

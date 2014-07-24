@@ -300,7 +300,7 @@ public class Tools
          */
         public static String print(ItemStack item, ChatColor defColor, ChatColor endColor, boolean alwaysShowAmount)
         {
-            if(item == null || item.getTypeId() == 0)
+            if(item == null || item.getType() == Material.AIR)
             {
                 return ChatColor.GRAY + "(nothing)";
             }
@@ -411,17 +411,17 @@ public class Tools
                 return true;
             }
             
-            return source.getTypeId() == item.getTypeId() && (source.getDurability() == Vanilla.DATA_WILDCARD ? true : source.getDurability() == item.getDurability()) && source.hasItemMeta() == item.hasItemMeta() && (source.hasItemMeta() ? Bukkit.getItemFactory().equals(source.getItemMeta(), item.getItemMeta()) : true);
+            return source.getType() == item.getType() && (source.getDurability() == Vanilla.DATA_WILDCARD ? true : source.getDurability() == item.getDurability()) && source.hasItemMeta() == item.hasItemMeta() && (source.hasItemMeta() ? Bukkit.getItemFactory().equals(source.getItemMeta(), item.getItemMeta()) : true);
         }
         
         public static ItemStack nullIfAir(ItemStack item)
         {
-            return (item == null || item.getTypeId() == 0 ? null : item);
+            return (item == null || item.getType() == Material.AIR ? null : item);
         }
         
         public static ItemStack merge(ItemStack into, ItemStack item)
         {
-            if(into == null || into.getTypeId() == 0)
+            if(into == null || into.getType() == Material.AIR)
             {
                 return item;
             }
@@ -440,7 +440,7 @@ public class Tools
         
         public static boolean canMerge(ItemStack intoItem, ItemStack item)
         {
-            if(intoItem == null || intoItem.getTypeId() == 0)
+            if(intoItem == null || intoItem.getType() == Material.AIR)
             {
                 return true;
             }
@@ -621,7 +621,7 @@ public class Tools
         
         if(split.length <= 0 || split[0].isEmpty())
         {
-            return new ItemStack(0);
+            return new ItemStack(Material.AIR);
         }
         
         value = split[0].trim();
@@ -642,13 +642,7 @@ public class Tools
             
             return null;
         }
-        
-        int type = material.getId();
-        
-        if(type <= 0)
-        {
-            return new ItemStack(0);
-        }
+
         
         int data = defaultData;
         
@@ -733,7 +727,7 @@ public class Tools
             }
         }
         
-        ItemStack item = new ItemStack(type, amount, (short)data);
+        ItemStack item = new ItemStack(material, amount, (short)data);
         
         if(args.length > 1)
         {
@@ -741,7 +735,7 @@ public class Tools
             
             if(meta == null && (settings & ParseBit.NO_WARNINGS) != ParseBit.NO_WARNINGS)
             {
-                ErrorReporter.warning("The " + type + " material doesn't support item meta, name/lore/enchants ignored.");
+                ErrorReporter.warning("The " + material + " material doesn't support item meta, name/lore/enchants ignored.");
                 return item;
             }
             
@@ -1222,7 +1216,7 @@ public class Tools
      */
     public static String convertItemToStringId(ItemStack item)
     {
-        return item.getTypeId() + (item.getDurability() == Vanilla.DATA_WILDCARD ? "" : ":" + item.getDurability());
+        return item.getType() + (item.getDurability() == Vanilla.DATA_WILDCARD ? "" : ":" + item.getDurability());
     }
     
     /**
@@ -1370,7 +1364,7 @@ public class Tools
                 continue;
             }
             
-            if(matrix[i] == null || ingredients[i] == null || ingredients[i].getTypeId() != matrix[i].getTypeId() || (ingredients[i].getDurability() != Vanilla.DATA_WILDCARD && ingredients[i].getDurability() != matrix[i].getDurability()))
+            if(matrix[i] == null || ingredients[i] == null || ingredients[i].getType() != matrix[i].getType() || (ingredients[i].getDurability() != Vanilla.DATA_WILDCARD && ingredients[i].getDurability() != matrix[i].getDurability()))
             {
                 return false;
             }
@@ -1477,16 +1471,13 @@ public class Tools
     {
         Collections.sort(ingredients, new Comparator<ItemStack>()
         {
-            int id1;
-            int id2;
-            
             @Override
             public int compare(ItemStack item1, ItemStack item2)
             {
-                id1 = item1.getTypeId();
-                id2 = item2.getTypeId();
+                Material id1 = item1.getType();
+                Material id2 = item2.getType();
                 
-                return (id1 == id2 ? (item1.getDurability() > item2.getDurability() ? -1 : 1) : (id1 > id2 ? -1 : 1));
+                return (id1 == id2 ? (item1.getDurability() > item2.getDurability() ? -1 : 1) : (id1.compareTo(id2)));
             }
         });
     }
@@ -1499,7 +1490,7 @@ public class Tools
         {
             if(entry.getKey() != null && entry.getValue() != null)
             {
-                str.append(entry.getKey()).append("=").append(entry.getValue().getTypeId()).append(":").append(entry.getValue().getDurability()).append(";");
+                str.append(entry.getKey()).append("=").append(entry.getValue().getType()).append(":").append(entry.getValue().getDurability()).append(";");
             }
         }
         
@@ -1522,7 +1513,7 @@ public class Tools
                 continue;
             }
             
-            str.append(ingredient.getTypeId()).append(":").append(ingredient.getDurability()).append(";");
+            str.append(ingredient.getType()).append(":").append(ingredient.getDurability()).append(";");
         }
         
         return str.toString();
@@ -1530,7 +1521,7 @@ public class Tools
     
     public static String convertFurnaceRecipeToString(FurnaceRecipe recipe)
     {
-        return "f_" + recipe.getInput().getTypeId() + ":" + recipe.getInput().getDurability();
+        return "f_" + recipe.getInput().getType() + ":" + recipe.getInput().getDurability();
     }
     
     public static String convertLocationToString(Location location)

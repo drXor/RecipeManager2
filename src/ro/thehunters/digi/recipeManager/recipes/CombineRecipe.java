@@ -133,7 +133,7 @@ public class CombineRecipe extends WorkbenchRecipe
         
         for(ItemStack item : ingredients)
         {
-            str.append(item.getTypeId()).append(':').append(item.getDurability()).append(';');
+            str.append(item.getType()).append(':').append(item.getDurability()).append(';');
         }
         
         hash = str.toString().hashCode();
@@ -156,7 +156,7 @@ public class CombineRecipe extends WorkbenchRecipe
             
             if(item != null)
             {
-                s.append(item.getTypeId());
+                s.append(item.getType());
                 
                 if(item.getDurability() != Vanilla.DATA_WILDCARD)
                 {

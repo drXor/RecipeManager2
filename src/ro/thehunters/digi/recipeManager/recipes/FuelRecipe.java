@@ -71,7 +71,7 @@ public class FuelRecipe extends BaseRecipe
     {
         this.ingredient = ingredient;
         
-        hash = ("fuel" + ingredient.getTypeId() + ":" + ingredient.getDurability()).hashCode();
+        hash = ("fuel" + ingredient.getType() + ":" + ingredient.getDurability()).hashCode();
     }
     
     public float getMinTime()
@@ -119,7 +119,7 @@ public class FuelRecipe extends BaseRecipe
     
     public String getIndexString()
     {
-        return ingredient.getTypeId() + (ingredient.getDurability() == Vanilla.DATA_WILDCARD ? "" : ":" + ingredient.getDurability());
+        return ingredient.getType() + (ingredient.getDurability() == Vanilla.DATA_WILDCARD ? "" : ":" + ingredient.getDurability());
     }
     
     @Override

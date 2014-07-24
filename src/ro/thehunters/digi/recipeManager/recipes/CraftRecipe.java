@@ -209,7 +209,7 @@ public class CraftRecipe extends WorkbenchRecipe
                     width = Math.max(width, w);
                     height = Math.max(height, h);
                     
-                    str.append(item.getTypeId()).append(':').append(item.getDurability());
+                    str.append(item.getType()).append(':').append(item.getDurability());
                 }
                 
                 str.append(';');
@@ -239,7 +239,7 @@ public class CraftRecipe extends WorkbenchRecipe
                 
                 if(item != null)
                 {
-                    s.append(item.getTypeId()); // item.getType().toString().toLowerCase());
+                    s.append(item.getType()); // item.getType().toString().toLowerCase());
                     
                     if(item.getDurability() != Vanilla.DATA_WILDCARD)
                     {

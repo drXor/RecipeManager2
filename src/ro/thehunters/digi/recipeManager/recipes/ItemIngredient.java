@@ -33,6 +33,6 @@ public class ItemIngredient extends ItemStack
             return true;
         }
         
-        return getTypeId() == item.getTypeId() && (getDurability() == Vanilla.DATA_WILDCARD ? true : getDurability() == item.getDurability()) && hasItemMeta() == item.hasItemMeta() && (hasItemMeta() ? Bukkit.getItemFactory().equals(getItemMeta(), item.getItemMeta()) : true);
+        return getType() == item.getType() && (getDurability() == Vanilla.DATA_WILDCARD ? true : getDurability() == item.getDurability()) && hasItemMeta() == item.hasItemMeta() && (hasItemMeta() ? Bukkit.getItemFactory().equals(getItemMeta(), item.getItemMeta()) : true);
     }
 }

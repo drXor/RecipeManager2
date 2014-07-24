@@ -581,6 +581,7 @@ public class Events implements Listener
                         
                         break;
                     }
+                    default:
                 }
                 
                 break;
@@ -1088,7 +1089,7 @@ public class Events implements Listener
             Furnace furnace = (Furnace)event.getBlock().getState();
             FurnaceInventory inv = furnace.getInventory();
             
-            // Special handling if the recipe has a predefined fuel in it
+            /*// Special handling if the recipe has a predefined fuel in it
             if(recipe.hasFuel())
             {
                 ItemStack fuel = Tools.Item.nullIfAir(inv.getFuel());
@@ -1125,7 +1126,7 @@ public class Events implements Listener
                         }
                     }
                 }
-            }
+            }*/
             
             FurnaceData data = Furnaces.get(furnace.getLocation());
             
@@ -1145,7 +1146,7 @@ public class Events implements Listener
             }
             else
             {
-                if(a.result() == null || a.result().getTypeId() == 0)
+                if(a.result() == null || a.result().getType() == Material.AIR)
                 {
                     recipe.subtractIngredient(inv, false);
                     event.setCancelled(true);
@@ -1153,7 +1154,11 @@ public class Events implements Listener
                 else
                 {
                     recipe.subtractIngredient(inv, true);
-                    event.setResult(a.result());
+                    ItemStack argsResult = a.result();
+                    ItemStack eventResult = event.getResult();
+                    if(argsResult.isSimilar(eventResult))
+                    eventResult.setAmount(eventResult.getAmount() + 1);
+                    event.setResult(eventResult);
                 }
             }
         }
