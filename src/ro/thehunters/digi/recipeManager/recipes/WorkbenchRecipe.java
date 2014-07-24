@@ -46,7 +46,7 @@ public class WorkbenchRecipe extends MultiResultRecipe {
 		if (!checkFlags(a)) {
 			a.sendReasons(a.player(), Messages.FLAG_PREFIX_RECIPE.get());
 
-			return Tools.Item.create(Material.FIRE, 0, 0, Messages.CRAFT_RESULT_DENIED_TITLE.get(), Messages.CRAFT_RESULT_DENIED_INFO.get());
+			return new ItemResult(new ItemStack(Material.AIR));
 		}
 
 		List<ItemResult> displayResults = new ArrayList<ItemResult>();
